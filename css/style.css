@@ -1,0 +1,255 @@
+/* ---------- GERAL ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #fdfdfd, #d6d6d6);
+  color: #333;
+  margin: 0;
+}
+
+/* Seções com leve destaque */
+section {
+  padding: 60px 0;
+}
+
+/* alterna leve contraste entre seções */
+section:nth-of-type(even) {
+  background-color: #fafafa;
+}
+section:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+/* ---------- HERO / UNIVERSO ---------- */
+.hero-section {
+  position: relative;
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 80px 20px;
+}
+
+.hero-content h1,
+.hero-content p {
+  color: #f0f8ff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Botão canto inferior direito */
+.hero-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Spotlight que segue o mouse */
+#spotlight {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 80%);
+  mix-blend-mode: lighten;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s, left 0.05s;
+  z-index: 3;
+}
+
+/* Typing effect */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ---------- BOTÕES ---------- */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  border-radius: 12px;
+  overflow: hidden; /* evita que imagem saia do card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- CARROSSEL ---------- */
+#demoCarousel {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+#demoCarousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  #demoCarousel { max-height: 500px; }
+}
+
+@media (min-width: 1200px) {
+  #demoCarousel { max-height: 600px; }
+}
+
+/* ---------- PROGRESS BARS ---------- */
+.progress-bar {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+footer a:hover {
+  color: #ffcc00; /* destaque sutil ao passar o mouse */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Dark Mode Toggle ---------- */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  z-index: 5;
+transition: background-color 0.3s ease;
+}
+
+.dark-toggle:hover {
+  background: rgba(255,255,255,0.9);
+}
+
+.dark-toggle .toggle-circle {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-toggle .toggle-circle .icon {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Dark Mode ativo */
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode .hero-section {
+  background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+}
+
+body.dark-mode .dark-toggle .toggle-circle {
+  transform: translateX(30px);
+  background: #222;
+}
+
+body.dark-mode .dark-toggle .icon {
+  transform: rotate(180deg);
+  content: "🌙";
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode .btn {
+  border-color: #555;
+}
+
+/* Seções */
+body.dark-mode section {
+  background-color: #1a1a1a;
+  color: #eaeaea;
+}
+
+/* Formulário */
+body.dark-mode .form-control {
+  background-color: #222;
+  color: #fff;
+  border-color: #555;
+}
+
+/* Carousel */
+body.dark-mode .carousel-inner,
+body.dark-mode .carousel-item {
+  background-color: #1a1a1a;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+body.dark-mode {
+  background: linear-gradient(180deg, #121212, #1a1a1a);
+  color: #eaeaea;
+}

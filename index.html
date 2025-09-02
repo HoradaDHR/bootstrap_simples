@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Simples 🚀</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero-section">
+  <div id="spotlight"></div>
+  <div id="darkModeToggle" class="dark-toggle">
+  <div class="toggle-circle">
+    <span class="icon">🌞</span>
+  </div>
+</div>
+  <div class="hero-content">
+    <h1 class="display-3 fw-bold">Bootstrap Simples 🌐</h1>
+    <p class="lead typing" id="typing-text"></p>
+  </div>
+  <button class="btn btn-light btn-lg shadow-sm hero-button" onclick="startConfetti()">Testar Bootstrap 🎉</button>
+</section>
+
+<!-- Botões -->
+<section id="botoes" class="container py-5">
+  <h2 class="section-title">Botões 🔘</h2>
+  <p>Botões são vida em qualquer site. No Bootstrap você consegue mudar cor, tamanho e estilo deles com classes simples.</p>
+  <div class="d-flex gap-2 flex-wrap">
+    <button class="btn btn-primary">Primário</button>
+    <button class="btn btn-success">Sucesso</button>
+    <button class="btn btn-danger">Perigo</button>
+    <button class="btn btn-outline-dark">Só contorno</button>
+    <button class="btn btn-lg btn-warning">Grandão</button>
+    <button class="btn btn-sm btn-info">Pequeno</button>
+  </div>
+</section>
+
+<!-- Cards -->
+<section id="cards" class="container py-5">
+  <h2 class="section-title">Cards 📦</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&w=400&h=200" class="card-img-top" alt="tech">
+        <div class="card-body">
+          <h5 class="card-title">Projeto 1</h5>
+          <p class="card-text">Um projetinho massa que você pode destacar com card.</p>
+          <a href="#" class="btn btn-primary">Ver mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=entropy&cs=tinysrgb&fit=max&w=400&h=200" class="card-img-top" alt="code">
+        <div class="card-body">
+          <h5 class="card-title">Projeto 2</h5>
+          <p class="card-text">Outro card, outro projeto. Fácil de repetir.</p>
+          <a href="#" class="btn btn-success">Ver mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&w=400&h=200" class="card-img-top" alt="design">
+        <div class="card-body">
+          <h5 class="card-title">Projeto 3</h5>
+          <p class="card-text">Cards se adaptam ao tamanho da tela, perfeito pra responsividade.</p>
+          <a href="#" class="btn btn-warning">Ver mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel -->
+<section id="carousel" class="container py-5">
+  <h2 class="section-title">Carrossel 🌟</h2>
+  <div id="demoCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&w=800&h=400" class="d-block w-100" alt="slide1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?crop=entropy&cs=tinysrgb&fit=max&w=800&h=400" class="d-block w-100" alt="slide2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&w=800&h=400" class="d-block w-100" alt="slide3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Progress Bars -->
+<section id="progress" class="container py-5">
+  <h2 class="section-title">Skills 📊</h2>
+  <div class="mb-3">
+    <label>HTML</label>
+    <div class="progress">
+      <div class="progress-bar bg-success" data-width="80%">80%</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>CSS</label>
+    <div class="progress">
+      <div class="progress-bar bg-info" data-width="60%">60%</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>JavaScript</label>
+    <div class="progress">
+      <div class="progress-bar bg-warning" data-width="50%">50%</div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulário -->
+<section id="formulario" class="container py-5">
+  <h2 class="section-title">Formulário 📝</h2>
+  <form>
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Seu nome aqui...">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="seu@email.com">
+    </div>
+    <div class="mb-3">
+      <label for="mensagem" class="form-label">Mensagem</label>
+      <textarea class="form-control" id="mensagem" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar 🚀</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <p class="mb-2 mb-md-0">&copy; 2025 Dennys da Hora Ribeiro</p>
+    <div class="d-flex gap-3">
+      <a href="https://linkedin.com/in/dennys-da-hora-ribeiro-068552236" target="_blank" class="text-light text-decoration-none">
+        <i class="bi bi-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://horadadhr.github.io/portifolio_att/" target="_blank" class="text-light text-decoration-none">
+        <i class="bi bi-globe"></i> Portfolio
+      </a>
+      <a href="mailto:dennys.da.hora.ribeiro@gmail.com" class="text-light text-decoration-none">
+        <i class="bi bi-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap Icons (para os ícones do footer) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
