@@ -160,7 +160,7 @@ footer p {
 
 /* ---------- Dark Mode Toggle ---------- */
 .dark-toggle {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   width: 60px;
@@ -171,8 +171,8 @@ footer p {
   display: flex;
   align-items: center;
   padding: 3px;
-  z-index: 5;
-transition: background-color 0.3s ease;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
 }
 
 .dark-toggle:hover {
@@ -253,3 +253,4 @@ body.dark-mode {
   background: linear-gradient(180deg, #121212, #1a1a1a);
   color: #eaeaea;
 }
+
